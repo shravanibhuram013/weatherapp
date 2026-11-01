@@ -1,8 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 28px 20px;
+  text-align: center;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  color: #14301f;
+  background: linear-gradient(160deg, #b9f0a0, #f6e27a);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 1.8rem;
+}
+
+.search {
   display: flex;
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #14301f;
+}
+
+.search button {
+  font: inherit;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #14532d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 48px 40px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+
+.message {
+  max-width: 520px;
+  margin: 24px auto;
+  font-size: 1.1rem;
+}
+
+.message:empty {
+  display: none;
+}
+
+.result {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.time {
+  margin: 4px 0 16px;
+  opacity: 0.8;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
+  margin: 8px 0 20px;
+}
+
+.icon {
+  width: 96px;
+  height: 96px;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.desc {
+  font-size: 1.2rem;
+}
+
+.tiles {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tile:last-child {
+  grid-column: span 2;
+}
+
+.tile {
+  padding: 16px 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+body.rain {
+  background: linear-gradient(160deg, #4f7f72, #2f5650);
+  color: #fff;
+}
+
+body.rain .tile {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .icon {
+    width: 112px;
+    height: 112px;
+  }
+
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tile:last-child {
+    grid-column: auto;
+  }
 }

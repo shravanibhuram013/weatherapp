@@ -12,6 +12,21 @@
     <input type="text" aria-label="City name" placeholder="Type a city name">
     <button type="button">Search</button>
   </div>
+  <p id="message" class="message"></p>
+  <section id="result" class="result" hidden>
+    <h2 id="place"></h2>
+    <p id="time" class="time"></p>
+    <div class="main">
+      <img id="icon" class="icon" alt="">
+      <span id="temp" class="temp"></span>
+      <span id="desc" class="desc"></span>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="label">Feels like</span><span id="feels" class="value"></span></div>
+      <div class="tile"><span class="label">Humidity</span><span id="humidity" class="value"></span></div>
+      <div class="tile"><span class="label">Wind</span><span id="wind" class="value"></span></div>
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>

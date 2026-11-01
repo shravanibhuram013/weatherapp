@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup: Meadow Tiles</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 16px 48px; background: #f1f3f2; color: #1c2b22;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif; }
+.page-title { text-align: center; margin: 0 0 4px; }
+.page-note { text-align: center; margin: 0 0 32px; color: #555; }
+section.state { max-width: 1440px; margin: 0 auto 48px; }
+section.state > h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.pair { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.device-label { font-size: .8rem; color: #555; margin: 0 0 6px; }
+.frame { max-width: 100%; overflow: hidden; border: 6px solid #2b2f2d; background: #fff; }
+.frame.phone { width: 375px; border-radius: 30px; }
+.frame.laptop { width: 960px; border-radius: 12px; }
+.screen { min-height: 520px; padding: 28px 20px; text-align: center; }
+.laptop .screen { padding: 48px 40px; min-height: 480px; }
+.screen h1 { margin: 0 0 20px; font-size: 1.8rem; }
+.laptop .screen h1 { font-size: 2.3rem; }
+.search { display: flex; gap: 8px; max-width: 520px; margin: 0 auto 24px; }
+.search input { flex: 1; min-width: 0; font: inherit; padding: 12px 14px; }
+.search button { font: inherit; padding: 12px 18px; cursor: default; }
+.msg { font-size: 1.1rem; margin: 24px auto; max-width: 520px; }
+.result { max-width: 760px; margin: 0 auto; }
+.result h2 { margin: 0; font-size: 1.5rem; }
+.time { margin: 4px 0 16px; opacity: .8; }
+.main { margin: 8px 0 20px; }
+.icon { display: block; font-size: 4.5rem; line-height: 1.1; }
+.temp { display: block; font-size: 3.6rem; font-weight: 700; line-height: 1.1; }
+.desc { display: block; font-size: 1.2rem; }
+.tiles { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.tiles .tile:last-child { grid-column: span 2; }
+.laptop .tiles { grid-template-columns: repeat(3, 1fr); }
+.laptop .tiles .tile:last-child { grid-column: auto; }
+.tile { padding: 16px 10px; }
+.tile .label { display: block; font-size: .85rem; opacity: .8; margin-bottom: 6px; }
+.tile .value { display: block; font-size: 1.3rem; font-weight: 600; }
+
+body { background: #eaf7ee; }
+.screen { background: #fff9d9; }            /* sunny tint */
+.screen.rain { background: #dfeee7; }
+.screen.cloud { background: #eef2ee; }
+.search input { border: 2px solid #b7dfc5; border-radius: 12px; background: #fff; }
+.search button { border: 0; border-radius: 12px; background: #2e8b57; color: #fff; font-weight: 600; }
+.result { background: #fff; border-radius: 20px; padding: 24px 16px; box-shadow: 0 4px 14px rgba(30,90,60,.12); }
+.tile { background: #e8f6ec; border-radius: 14px; }
+.msg.friendly { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 4px 14px rgba(30,90,60,.12); }
+</style>
+</head>
+<body>
+<h1 class="page-title">Mockup: Meadow Tiles</h1>
+<p class="page-note">Design only. The buttons do not work and the weather values are made up.</p>
+<section class="state"><h2>State 1: Before searching</h2><div class="pair">
+<div><p class="device-label">Phone-sized screen</p>
+<div class="frame phone"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+
+</div></div></div>
+<div><p class="device-label">Laptop-sized screen</p>
+<div class="frame laptop"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+
+</div></div></div>
+</div></section>
+<section class="state"><h2>State 2: Loading</h2><div class="pair">
+<div><p class="device-label">Phone-sized screen</p>
+<div class="frame phone"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<p class="msg">Loading...</p>
+</div></div></div>
+<div><p class="device-label">Laptop-sized screen</p>
+<div class="frame laptop"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<p class="msg">Loading...</p>
+</div></div></div>
+</div></section>
+<section class="state"><h2>State 3: Weather result (sunny day)</h2><div class="pair">
+<div><p class="device-label">Phone-sized screen</p>
+<div class="frame phone"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<div class="result">
+<h2>London, United Kingdom</h2>
+<p class="time">Local time: 12 June 2026, 14:30</p>
+<div class="main"><span class="icon">☀️</span><span class="temp">24°C</span><span class="desc">Sunny</span></div>
+<div class="tiles">
+<div class="tile"><span class="label">Feels like</span><span class="value">26°C</span></div>
+<div class="tile"><span class="label">Humidity</span><span class="value">48%</span></div>
+<div class="tile"><span class="label">Wind</span><span class="value">14 km/h NW</span></div>
+</div></div>
+</div></div></div>
+<div><p class="device-label">Laptop-sized screen</p>
+<div class="frame laptop"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<div class="result">
+<h2>London, United Kingdom</h2>
+<p class="time">Local time: 12 June 2026, 14:30</p>
+<div class="main"><span class="icon">☀️</span><span class="temp">24°C</span><span class="desc">Sunny</span></div>
+<div class="tiles">
+<div class="tile"><span class="label">Feels like</span><span class="value">26°C</span></div>
+<div class="tile"><span class="label">Humidity</span><span class="value">48%</span></div>
+<div class="tile"><span class="label">Wind</span><span class="value">14 km/h NW</span></div>
+</div></div>
+</div></div></div>
+</div></section>
+<section class="state"><h2>State 3, extra look: the same result on a rainy day (shows how the colours change with the weather)</h2><div class="pair">
+<div><p class="device-label">Phone-sized screen</p>
+<div class="frame phone"><div class="screen rain">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<div class="result">
+<h2>London, United Kingdom</h2>
+<p class="time">Local time: 12 June 2026, 14:30</p>
+<div class="main"><span class="icon">🌧️</span><span class="temp">14°C</span><span class="desc">Light rain</span></div>
+<div class="tiles">
+<div class="tile"><span class="label">Feels like</span><span class="value">12°C</span></div>
+<div class="tile"><span class="label">Humidity</span><span class="value">82%</span></div>
+<div class="tile"><span class="label">Wind</span><span class="value">22 km/h SW</span></div>
+</div></div>
+</div></div></div>
+<div><p class="device-label">Laptop-sized screen</p>
+<div class="frame laptop"><div class="screen rain">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<div class="result">
+<h2>London, United Kingdom</h2>
+<p class="time">Local time: 12 June 2026, 14:30</p>
+<div class="main"><span class="icon">🌧️</span><span class="temp">14°C</span><span class="desc">Light rain</span></div>
+<div class="tiles">
+<div class="tile"><span class="label">Feels like</span><span class="value">12°C</span></div>
+<div class="tile"><span class="label">Humidity</span><span class="value">82%</span></div>
+<div class="tile"><span class="label">Wind</span><span class="value">22 km/h SW</span></div>
+</div></div>
+</div></div></div>
+</div></section>
+<section class="state"><h2>State 4: City not found</h2><div class="pair">
+<div><p class="device-label">Phone-sized screen</p>
+<div class="frame phone"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<p class="msg friendly">😕 Sorry, I couldn't find that city. Check the spelling and try again.</p>
+</div></div></div>
+<div><p class="device-label">Laptop-sized screen</p>
+<div class="frame laptop"><div class="screen ">
+<h1>Weather App</h1>
+<div class="search"><input type="text" placeholder="Type a city name" readonly><button type="button">Search</button></div>
+<p class="msg friendly">😕 Sorry, I couldn't find that city. Check the spelling and try again.</p>
+</div></div></div>
+</div></section>
+</body>
+</html>
